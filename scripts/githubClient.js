@@ -1,9 +1,9 @@
 const DEFAULT_API_BASE = "https://api.github.com";
 
 function buildHeaders() {
-  const token = process.env.GITHUB_TOKEN;
+  const token = process.env.TOKEN;
   if (!token || !String(token).trim()) {
-    throw new Error("GITHUB_TOKEN is required to call the GitHub API.");
+    throw new Error("TOKEN is required to call the GitHub API.");
   }
 
   return {

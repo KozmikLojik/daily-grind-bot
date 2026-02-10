@@ -2,9 +2,9 @@ const { createOrUpdateRepo } = require("./createOrUpdateRepo");
 const { writeDailyLog } = require("./writeDailyLog");
 
 async function run() {
-  const token = process.env.GITHUB_TOKEN;
+  const token = process.env.TOKEN;
   if (!token || !String(token).trim()) {
-    throw new Error("GITHUB_TOKEN is required to run the daily job.");
+    throw new Error("TOKEN is required to run the daily job.");
   }
 
   await createOrUpdateRepo();
