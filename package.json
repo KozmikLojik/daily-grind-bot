@@ -1,0 +1,11 @@
+{
+  "name": "daily-grind-bot",
+  "version": "1.0.0",
+  "description": "Automated daily GitHub commit bot for consistency tracking",
+  "main": "scripts/runDaily.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node scripts/runDaily.js"
+  },
+  "dependencies": {}
+}
