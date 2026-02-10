@@ -1,0 +1,26 @@
+name: Daily
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run daily script
+        run: node scripts/runDaily.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.DAILY_GRIND_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.DAILY_GRIND_OWNER }}
+          REPO_NAME: ${{ secrets.DAILY_GRIND_REPO }}
+
