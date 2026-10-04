@@ -5,6 +5,7 @@
   "main": "scripts/runDaily.js",
   "type": "commonjs",
   "scripts": {
+    "daily": "node scripts/runDaily.js",
     "start": "node scripts/runDaily.js"
   },
   "dependencies": {}
